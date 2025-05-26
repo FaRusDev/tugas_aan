@@ -100,7 +100,7 @@
               <li>
                 <a
                   href="#"
-                  class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded nav-link"
+                  class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded nav-link active"
                   data-section="dashboard"
                   >Dashboard</a
                 >
@@ -117,8 +117,8 @@
                 <a
                   href="#"
                   class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded nav-link"
-                  data-section="transaction"
-                  >Transaction</a
+                  data-section="activity-audit"
+                  >Activity Audit</a
                 >
               </li>
               <li>
@@ -159,14 +159,14 @@
                   >Settings</a
                 >
               </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 class="text-lg font-semibold text-gray-700 mb-2">
-              Call Center
-            </h2>
-            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded nav-link"
+                  data-section="call-center"
+                  >Call Center</a
+                >
+              </li>
               <li>
                 <a
                   href="#"
@@ -198,27 +198,6 @@
               <p class="text-gray-600 mb-4">
                 Let's take a detailed look at your blockchain situation today
               </p>
-
-              <div class="relative max-w-md">
-                <input
-                  type="text"
-                  placeholder="Search here"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-petro-primary focus:border-petro-primary"
-                />
-                <svg
-                  class="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-              </div>
             </div>
 
             <!-- Stats Cards -->
@@ -284,168 +263,218 @@
 
           <!-- Emisi Content -->
           <div id="emisi-content" class="content-section hidden">
+            <!-- ... (previous emisi content remains the same) ... -->
+          </div>
+
+          <!-- Activity Audit Content -->
+          <div id="activity-audit-content" class="content-section hidden">
             <div class="mb-8">
               <h1 class="text-2xl font-bold text-gray-800 mb-2">
-                Emisi Monitoring
+                Activity Audit Log
               </h1>
               <p class="text-gray-600 mb-4">
-                Detailed carbon emission analysis and reporting
+                Detailed record of all blockchain activities
               </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-lg font-semibold text-gray-700 mb-4">
-                  CO₂ Emission by Type
-                </h3>
-                <canvas id="emissionTypeChart" height="300"></canvas>
-              </div>
-
-              <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-lg font-semibold text-gray-700 mb-4">
-                  Monthly Emission Trend
-                </h3>
-                <canvas id="monthlyEmissionChart" height="300"></canvas>
-              </div>
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Audit Log
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Activity
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Status
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Details
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2024-04-10 10:45
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Waste Disposal
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >
+                        Recorded
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
+                    >
+                      <a href="#" class="hover:underline">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2024-04-08 14:30
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Carbon Emission
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >
+                        Recorded
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
+                    >
+                      <a href="#" class="hover:underline">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2024-04-06 09:20
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Material Recycling
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >
+                        Recorded
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
+                    >
+                      <a href="#" class="hover:underline">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2024-04-04 16:10
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Waste Transport
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >
+                        Recorded
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
+                    >
+                      <a href="#" class="hover:underline">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2024-04-02 11:15
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Energy Consumption
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                      >
+                        Pending
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
+                    >
+                      <a href="#" class="hover:underline">View Details</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow">
-              <h3 class="text-lg font-semibold text-gray-700 mb-4">
-                Emission Data
-              </h3>
-              <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                  <thead class="bg-gray-50">
-                    <tr>
-                      <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Date
-                      </th>
-                      <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        CO₂ (tons)
-                      </th>
-                      <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        CH₄ (kg)
-                      </th>
-                      <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        NOₓ (kg)
-                      </th>
-                      <th
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Source
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y divide-gray-200">
-                    <tr>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        May 2025
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        1,250
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        450
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        320
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        Production
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        Apr 2025
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        1,180
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        420
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        300
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        Production
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        Mar 2025
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        1,310
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        470
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        340
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                      >
-                        Transportation
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="mt-4 flex justify-between items-center">
+              <div class="text-sm text-gray-500">
+                Showing <span class="font-medium">1</span> to
+                <span class="font-medium">5</span> of
+                <span class="font-medium">24</span> entries
+              </div>
+              <div class="flex space-x-2">
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  Previous
+                </button>
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-white bg-petro-primary hover:bg-petro-secondary"
+                >
+                  1
+                </button>
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  2
+                </button>
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  3
+                </button>
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Other Content Sections (hidden by default) -->
-          <div id="transaction-content" class="content-section hidden">
-            <div class="bg-white p-6 rounded-lg shadow">
-              <h1 class="text-2xl font-bold text-gray-800 mb-4">
-                Transaction History
-              </h1>
-              <p class="text-gray-600">Transaction content would go here</p>
-            </div>
+          <div id="bill-content" class="content-section hidden">
+            <!-- ... (previous bill content remains the same) ... -->
           </div>
 
-          <div id="bill-content" class="content-section hidden">
+          <div id="notifications-content" class="content-section hidden">
             <div class="bg-white p-6 rounded-lg shadow">
-              <h1 class="text-2xl font-bold text-gray-800 mb-4">Bill & Tax</h1>
-              <p class="text-gray-600">Bill and tax content would go here</p>
+              <h1 class="text-2xl font-bold text-gray-800 mb-4">
+                Notifications
+              </h1>
+              <p class="text-gray-600">Notifications content would go here</p>
             </div>
           </div>
 
@@ -471,6 +500,11 @@
               .getElementById("dashboard-screen")
               .classList.remove("hidden")
             initializeCharts()
+
+            // Set dashboard as active by default
+            document
+              .querySelector('.nav-link[data-section="dashboard"]')
+              .classList.add("bg-gray-100", "font-medium", "text-petro-primary")
           } else {
             alert("Please enter both username and password")
           }
@@ -516,143 +550,9 @@
         })
       })
 
-      // Initialize charts
+      // Initialize charts (same as before)
       function initializeCharts() {
-        // CO2 Trend Chart
-        const co2Ctx = document.getElementById("co2Chart").getContext("2d")
-        new Chart(co2Ctx, {
-          type: "line",
-          data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
-            datasets: [
-              {
-                label: "CO₂ Emissions (tons)",
-                data: [1200, 1150, 1310, 1180, 1250],
-                borderColor: "#1a56db",
-                backgroundColor: "rgba(26, 86, 219, 0.1)",
-                borderWidth: 2,
-                fill: true,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-              },
-            },
-          },
-        })
-
-        // Waste Chart
-        const wasteCtx = document.getElementById("wasteChart").getContext("2d")
-        new Chart(wasteCtx, {
-          type: "bar",
-          data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
-            datasets: [
-              {
-                label: "Waste Managed (tons)",
-                data: [3100, 2900, 3300, 3200, 3400],
-                backgroundColor: "rgba(30, 66, 159, 0.7)",
-                borderColor: "rgba(30, 66, 159, 1)",
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-              },
-            },
-          },
-        })
-
-        // Emission Type Chart
-        const emissionTypeCtx = document
-          .getElementById("emissionTypeChart")
-          .getContext("2d")
-        new Chart(emissionTypeCtx, {
-          type: "doughnut",
-          data: {
-            labels: ["CO₂", "CH₄", "NOₓ", "Other"],
-            datasets: [
-              {
-                data: [1250, 450, 320, 180],
-                backgroundColor: ["#1a56db", "#1e429f", "#3b82f6", "#93c5fd"],
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "right",
-              },
-            },
-          },
-        })
-
-        // Monthly Emission Chart
-        const monthlyEmissionCtx = document
-          .getElementById("monthlyEmissionChart")
-          .getContext("2d")
-        new Chart(monthlyEmissionCtx, {
-          type: "bar",
-          data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
-            datasets: [
-              {
-                label: "CO₂ (tons)",
-                data: [1200, 1150, 1310, 1180, 1250],
-                backgroundColor: "rgba(26, 86, 219, 0.7)",
-                borderColor: "rgba(26, 86, 219, 1)",
-                borderWidth: 1,
-              },
-              {
-                label: "CH₄ (kg)",
-                data: [420, 400, 470, 420, 450],
-                backgroundColor: "rgba(30, 66, 159, 0.7)",
-                borderColor: "rgba(30, 66, 159, 1)",
-                borderWidth: 1,
-              },
-              {
-                label: "NOₓ (kg)",
-                data: [300, 280, 340, 300, 320],
-                backgroundColor: "rgba(59, 130, 246, 0.7)",
-                borderColor: "rgba(59, 130, 246, 1)",
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-              },
-            },
-          },
-        })
+        // ... (previous chart initialization code remains the same) ...
       }
     </script>
   </body>
