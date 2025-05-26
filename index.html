@@ -263,7 +263,152 @@
 
           <!-- Emisi Content -->
           <div id="emisi-content" class="content-section hidden">
-            <!-- ... (previous emisi content remains the same) ... -->
+            <div class="mb-8">
+              <h1 class="text-2xl font-bold text-gray-800 mb-2">
+                Emisi Monitoring
+              </h1>
+              <p class="text-gray-600 mb-4">
+                Detailed carbon emission analysis and reporting
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                  CO₂ Emission by Type
+                </h3>
+                <canvas id="emissionTypeChart" height="300"></canvas>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                  Monthly Emission Trend
+                </h3>
+                <canvas id="monthlyEmissionChart" height="300"></canvas>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                Emission Data
+              </h3>
+              <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Date
+                      </th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        CO₂ (tons)
+                      </th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        CH₄ (kg)
+                      </th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        NOₓ (kg)
+                      </th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Source
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        May 2025
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        1,250
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        450
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        320
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        Production
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        Apr 2025
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        1,180
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        420
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        300
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        Production
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        Mar 2025
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        1,310
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        470
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        340
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                      >
+                        Transportation
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
           <!-- Activity Audit Content -->
@@ -400,73 +545,17 @@
                       <a href="#" class="hover:underline">View Details</a>
                     </td>
                   </tr>
-                  <tr>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      2024-04-02 11:15
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Energy Consumption
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                      >
-                        Pending
-                      </span>
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-petro-primary"
-                    >
-                      <a href="#" class="hover:underline">View Details</a>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
-
-            <div class="mt-4 flex justify-between items-center">
-              <div class="text-sm text-gray-500">
-                Showing <span class="font-medium">1</span> to
-                <span class="font-medium">5</span> of
-                <span class="font-medium">24</span> entries
-              </div>
-              <div class="flex space-x-2">
-                <button
-                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
-                >
-                  Previous
-                </button>
-                <button
-                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-white bg-petro-primary hover:bg-petro-secondary"
-                >
-                  1
-                </button>
-                <button
-                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
-                >
-                  2
-                </button>
-                <button
-                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
-                >
-                  3
-                </button>
-                <button
-                  class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
           </div>
 
-          <!-- Other Content Sections (hidden by default) -->
+          <!-- Other Content Sections -->
           <div id="bill-content" class="content-section hidden">
-            <!-- ... (previous bill content remains the same) ... -->
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h1 class="text-2xl font-bold text-gray-800 mb-4">Bill & Tax</h1>
+              <p class="text-gray-600">Bill and tax content would go here</p>
+            </div>
           </div>
 
           <div id="notifications-content" class="content-section hidden">
@@ -477,8 +566,6 @@
               <p class="text-gray-600">Notifications content would go here</p>
             </div>
           </div>
-
-          <!-- Add other content sections similarly -->
         </div>
       </div>
     </div>
@@ -550,9 +637,201 @@
         })
       })
 
-      // Initialize charts (same as before)
+      // Initialize charts
       function initializeCharts() {
-        // ... (previous chart initialization code remains the same) ...
+        // CO2 Trend Chart
+        const co2Ctx = document.getElementById("co2Chart").getContext("2d")
+        new Chart(co2Ctx, {
+          type: "line",
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            datasets: [
+              {
+                label: "CO₂ Emissions (tons)",
+                data: [1200, 1150, 1310, 1180, 1250],
+                borderColor: "#1a56db",
+                backgroundColor: "rgba(26, 86, 219, 0.1)",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return (
+                      context.dataset.label + ": " + context.parsed.y + " tons"
+                    )
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: false,
+                title: {
+                  display: true,
+                  text: "Tons of CO₂",
+                },
+              },
+            },
+          },
+        })
+
+        // Waste Chart
+        const wasteCtx = document.getElementById("wasteChart").getContext("2d")
+        new Chart(wasteCtx, {
+          type: "bar",
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            datasets: [
+              {
+                label: "Waste Managed (tons)",
+                data: [3100, 2900, 3300, 3200, 3400],
+                backgroundColor: "rgba(30, 66, 159, 0.7)",
+                borderColor: "rgba(30, 66, 159, 1)",
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return (
+                      context.dataset.label + ": " + context.parsed.y + " tons"
+                    )
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: false,
+                title: {
+                  display: true,
+                  text: "Tons of Waste",
+                },
+              },
+            },
+          },
+        })
+
+        // Emission Type Chart
+        const emissionTypeCtx = document
+          .getElementById("emissionTypeChart")
+          .getContext("2d")
+        new Chart(emissionTypeCtx, {
+          type: "doughnut",
+          data: {
+            labels: ["CO₂", "CH₄", "NOₓ", "Other"],
+            datasets: [
+              {
+                data: [1250, 450, 320, 180],
+                backgroundColor: ["#1a56db", "#1e429f", "#3b82f6", "#93c5fd"],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "right",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    const label = context.label || ""
+                    const value = context.raw || 0
+                    const total = context.dataset.data.reduce(
+                      (a, b) => a + b,
+                      0
+                    )
+                    const percentage = Math.round((value / total) * 100)
+                    return `${label}: ${value} (${percentage}%)`
+                  },
+                },
+              },
+            },
+          },
+        })
+
+        // Monthly Emission Chart
+        const monthlyEmissionCtx = document
+          .getElementById("monthlyEmissionChart")
+          .getContext("2d")
+        new Chart(monthlyEmissionCtx, {
+          type: "bar",
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            datasets: [
+              {
+                label: "CO₂ (tons)",
+                data: [1200, 1150, 1310, 1180, 1250],
+                backgroundColor: "rgba(26, 86, 219, 0.7)",
+                borderColor: "rgba(26, 86, 219, 1)",
+                borderWidth: 1,
+              },
+              {
+                label: "CH₄ (kg)",
+                data: [420, 400, 470, 420, 450],
+                backgroundColor: "rgba(30, 66, 159, 0.7)",
+                borderColor: "rgba(30, 66, 159, 1)",
+                borderWidth: 1,
+              },
+              {
+                label: "NOₓ (kg)",
+                data: [300, 280, 340, 300, 320],
+                backgroundColor: "rgba(59, 130, 246, 0.7)",
+                borderColor: "rgba(59, 130, 246, 1)",
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    let label = context.dataset.label || ""
+                    if (label) {
+                      label += ": "
+                    }
+                    label += context.parsed.y
+                    label += label.includes("CO₂") ? " tons" : " kg"
+                    return label
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: false,
+                title: {
+                  display: true,
+                  text: "Emission Quantity",
+                },
+              },
+            },
+          },
+        })
       }
     </script>
   </body>
